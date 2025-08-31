@@ -1,4 +1,4 @@
-// This is My FIre Base PRoject
+// This is My Fire Base Project
 const firebaseConfig = {
   apiKey: "AIzaSyBtfJY6eWzgOptzBTYUkW05p7f8Ou3cOnI",
   authDomain: "cd-first-project-15d4e.firebaseapp.com",
