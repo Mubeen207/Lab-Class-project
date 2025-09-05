@@ -50,6 +50,27 @@
 // } else {
 //   console.log("No Discount");
 // }
+//-----------------------------------------------------------------------------------
+// function Students(stadName, rollNo, phone) {
+//   this.name = stadName;
+//   this.rollNo = rollNo;
+//   this.phone = phone;
+//   this.greetUser = function (name) {
+//     console.log("Hello " + name);
+//   };
+// }
+// let std1 = new Students("Mubeen", "383728", "03322279397");
+// let std2 = new Students("Zaheer", "383758", "03354675395");
+// let std3 = new Students("Mubeen", "383728", "03215459393");
+// Students.prototype.attendance = false;
+// std1.attendance = true;
+
+// console.log(std1, std2, std3);
+
+// console.log(std1.attendance, std2.attendance, std3.attendance);
+
+//--------------------------------------------------------------------------------------------
+
 function Students(stadName, rollNo, phone) {
   this.name = stadName;
   this.rollNo = rollNo;
@@ -58,11 +79,7 @@ function Students(stadName, rollNo, phone) {
     console.log("Hello " + name);
   };
 }
-let std1 = new Students("Mubeen", "383728", "03322279397");
-let std2 = new Students("Zaheer", "383758", "03354675395");
-let std3 = new Students("Mubeen", "383728", "03215459393");
-Students.prototype.attendance = false;
-std1.attendance = true;
-console.log(std1, std2, std3);
-
-console.log(std1.attendance, std2.attendance, std3.attendance);
+Students.prototype.calcAnnual = function () {
+  console.log("Calculated");
+};
+console.log(Students.hasOwnProperty("calcAnnual"));
