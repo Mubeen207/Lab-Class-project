@@ -71,15 +71,16 @@
 
 //--------------------------------------------------------------------------------------------
 
-function Students(stadName, rollNo, phone) {
-  this.name = stadName;
-  this.rollNo = rollNo;
-  this.phone = phone;
-  this.greetUser = function (name) {
-    console.log("Hello " + name);
-  };
-}
-Students.prototype.calcAnnual = function () {
-  console.log("Calculated");
-};
-console.log(Students.hasOwnProperty("calcAnnual"));
+// function Students(stadName, rollNo, phone) {
+//   this.name = stadName;
+//   this.rollNo = rollNo;
+//   this.phone = phone;
+//   this.greetUser = function (name) {
+//     console.log("Hello " + name);
+//   };
+// }
+// Students.prototype.calcAnnual = function () {
+//   console.log("Calculated");
+// };
+// console.log(Students.hasOwnProperty("calcAnnual"));
+// console.log(Students.hasOwnProperty("name"));
