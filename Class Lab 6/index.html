@@ -4,12 +4,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    user name: <input id="user_name" type="text" /> <br />
-    user id: <input id="user_id" type="text" /> <br />
-    phone: <input id="phone" type="text" /><br />
-    <button onclick="add()">Add</button>
+    <div class="container">
+      <div class="div-1">
+        <p>user name:</p>
+        <input id="user_name" type="text" />
+      </div>
+      <div class="div-2">
+        <p>user id:</p>
+        <input id="user_id" type="text" />
+      </div>
+      <div class="div-3">
+        <p>phone:</p>
+        <input id="phone" type="text" />
+      </div>
+      <button onclick="add()">Add</button>
+    </div>
     <script src="app.js"></script>
   </body>
 </html>
