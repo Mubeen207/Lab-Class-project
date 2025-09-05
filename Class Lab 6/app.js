@@ -86,6 +86,7 @@
 // console.log(Students.hasOwnProperty("name"));
 //---------------------------------------------------------------------
 
+let arr = [];
 function add() {
   let user_name = document.getElementById("user_name");
   let user_id = document.getElementById("user_id");
@@ -103,5 +104,3 @@ function add() {
   user_id.value = "";
   phone.value = "";
 }
-
-let arr = [];
