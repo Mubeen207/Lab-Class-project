@@ -8,6 +8,13 @@ let cars = {
 };
 
 delete cars.color;
+
+if ("price" in cars) {
+  console.log(cars.model + " is Availablr For Sale");
+} else {
+  console.log(cars.model + " is Not Available for sale");
+}
+
 console.log(cars);
 
 // for (let props in cars) {
