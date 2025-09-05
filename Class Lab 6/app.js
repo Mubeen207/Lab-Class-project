@@ -7,6 +7,7 @@ let cars = {
   },
 };
 
+// delete cars.color;
 delete cars.price;
 
 if ("price" in cars) {
