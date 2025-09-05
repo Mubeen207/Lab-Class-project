@@ -8,7 +8,7 @@ let cars = {
 };
 
 delete cars.color;
-  console.log(cars);
+console.log(cars);
 
 // for (let props in cars) {
 //   console.log(props);
