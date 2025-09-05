@@ -7,7 +7,7 @@ let cars = {
   },
 };
 
-delete cars.color;
+delete cars.price;
 
 if ("price" in cars) {
   console.log(cars.model + " is Availablr For Sale");
