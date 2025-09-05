@@ -86,7 +86,22 @@
 // console.log(Students.hasOwnProperty("name"));
 //---------------------------------------------------------------------
 
-function add(){
-    
+function add() {
+  let user_name = document.getElementById("user_name");
+  let user_id = document.getElementById("user_id");
+  let phone = document.getElementById("phone");
+
+  function User(user_name, user_id, phone) {
+    this.user_name = user_name;
+    this.user_id = user_id;
+    this.phone = phone;
+  }
+  let user = new User(user_name.value, user_id.value, phone.value);
+  arr.push(user);
+  console.log(arr);
+  user_name.value = "";
+  user_id.value = "";
+  phone.value = "";
 }
 
+let arr = [];
