@@ -84,3 +84,9 @@
 // };
 // console.log(Students.hasOwnProperty("calcAnnual"));
 // console.log(Students.hasOwnProperty("name"));
+//---------------------------------------------------------------------
+
+function add(){
+    
+}
+
