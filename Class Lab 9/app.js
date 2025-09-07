@@ -1,7 +1,7 @@
 // This is My Fire Base Project
 const firebaseConfig = {
   apiKey: // enter api key
-  authDomain: "cd-first-project-15d4e.firebaseapp.com",
+  authDomain: // Enter authDomain 
   projectId: "cd-first-project-15d4e",
   storageBucket: "cd-first-project-15d4e.firebasestorage.app",
   messagingSenderId: "221789667167",
