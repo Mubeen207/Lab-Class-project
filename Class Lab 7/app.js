@@ -10,4 +10,4 @@ setInterval(function () {
   if (topImageIndex >= sliderImages.length) {
     topImageIndex = 0;
   }
-}, 1000);
+}, 3000);
