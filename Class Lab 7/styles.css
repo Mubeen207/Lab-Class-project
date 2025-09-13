@@ -3,6 +3,8 @@
   height: 400px;
   position: absolute;
   left: 15%;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
 }
 .arrows {
   width: 50px;
@@ -18,3 +20,4 @@
   top: 180px;
   transform: scaleX(-1);
 }
+
