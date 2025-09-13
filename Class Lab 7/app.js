@@ -74,7 +74,6 @@ function stopSlider() {
   clearInterval(sliderInterval);
 }
 
-// Manual controls
 function swapRight() {
   stopSlider();
   nextImage();
