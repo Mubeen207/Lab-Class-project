@@ -45,26 +45,42 @@
 // });
 // console.log("1");
 
-let rendom = Math.ceil(Math.random() * 100);
-console.log(rendom);
+// let rendom = Math.ceil(Math.random() * 100);
+// console.log(rendom);
 
-let firstAsync = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-        if (rendom % 2 === 0) {
-            resolve(rendom);
+// let firstAsync = new Promise(function (resolve, reject) {
+//     setTimeout(function () {
+//         if (rendom % 2 === 0) {
+//             resolve(rendom);
 
-        } else {
-            reject("Error");
-        }
-    }, 1000)
-})
+//         } else {
+//             reject("Error");
+//         }
+//     }, 1000)
+// })
 
-firstAsync
-    .then(function (resolve) {
-        console.log(resolve);
+// firstAsync
+//     .then(function (resolve) {
+//         console.log(resolve);
 
+//     })
+//     .catch(function (error) {
+//         console.error(error);
+
+//     });
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+
+function register (){
+    firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
+    .then((userCredential) => {
+        // Signed in 
+        var user = userCredential.user;
+        // ...
     })
-    .catch(function (error) {
-        console.error(error);
-
+    .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ..
     });
+}

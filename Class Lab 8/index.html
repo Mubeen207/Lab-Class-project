@@ -6,6 +6,24 @@
     <title>Firebase</title>
   </head>
   <body>
+    <input type="email" id="email">
+    <input type="password" name="" id="password">
+    <button onClick="register()">Submit</button>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-auth-compat.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyBtfJY6eWzgOptzBTYUkW05p7f8Ou3cOnI",
+        authDomain: "cd-first-project-15d4e.firebaseapp.com",
+        projectId: "cd-first-project-15d4e",
+        storageBucket: "cd-first-project-15d4e.firebasestorage.app",
+        messagingSenderId: "221789667167",
+        appId: "1:221789667167:web:e354f7017366b11ddd80ea",
+        measurementId: "G-H37P36CTFD",
+      };
+      firebase.initializeApp(firebaseConfig);
+    </script>
     <script src="app.js"></script>
   </body>
 </html>
