@@ -73,7 +73,7 @@ function signOut() {
 
 function redirectToTodo() {
     window.location.href = "./home.html";
-    localStorage.setItem("uid", JSON.stringify(fb.currentUser.uid));
+    // localStorage.setItem("uid", JSON.stringify(fb.currentUser.uid));
 }
 function redirectToSignUp() {
     window.location.href = "./index.html";
@@ -100,29 +100,38 @@ function addTask() {
             homeMessage.style.color = "red";
         });
 }
-
-// function getTodoData () {
-//     db.collection("todos").get().then((querySnapshot) => {
-//     querySnapshot.forEach((doc) => {
-//         console.log(doc.id, doc.data());
-//     });
-// });
-// }
-
+// firestore
+let todoEl = document.getElementById("todos");
 function getUserTodo() {
-    var docRef = db.collection("todos").doc(JSON.parse(localStorage.getItem("uid")));
-    console.log(JSON.parse(localStorage.getItem("uid")));
-    docRef
-        .get()
-        .then((doc) => {
-            if (doc.exists) {
-                console.log("Document data:", doc.data());
-            } else {
-                // doc.data() will be undefined in this case
-                console.log("No such document!", doc.data());
-            }
+    db.collection("todos").add({
+        todo: todoEl.value,
+        uid: fb.currentUser.uid
+    })
+        .then((docRef) => {
+            console.log("Document written with ID: ", docRef.id);
         })
         .catch((error) => {
-            console.log("Error getting document:", error);
+            console.error("Error adding document: ", error);
         });
+}
+
+function getTodos() {
+    let uidData = JSON.parse(localStorage.getItem("uid"));
+    db.collection("todos").where("uid", "==", uidData.uid)
+        .onSnapshot((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+                console.log(doc.data());
+                makeListing(doc.data());
+
+            });
+        });
+}
+
+let divListing = document.getElementById("listing");
+
+function makeListing(doc) {
+    let p = document.createElement("p");
+    let pTextNode = document.createTextNode(doc.uid);
+    p.appendChild(pTextNode);
+    divListing.appendChild(p);
 }
