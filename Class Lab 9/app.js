@@ -110,10 +110,23 @@ function makeListing(doc) {
   console.log(doc.id);
   
   let p = document.createElement("p");
+  
+  let editBtn = document.createElement("button");
+  let deleteBtn = document.createElement("button");
+
   let pTextNode = document.createTextNode(doc.todo);
+
+  let deleteTextNode = document.createTextNode("Delete");
+  let editTextNode = document.createTextNode("Edit");
+
   p.setAttribute("id" , doc.id);
   p.appendChild(pTextNode);
-  divListing.appendChild(p);
 
-  // console.log(doc.todo);
+  deleteBtn.appendChild(deleteTextNode);
+  editBtn.appendChild(editTextNode);
+
+  p.appendChild(deleteBtn);
+  p.appendChild(editBtn);
+
+  divListing.appendChild(p);
 }
