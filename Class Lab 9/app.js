@@ -107,10 +107,10 @@ function getTodos() {
 let divListing = document.getElementById("listing");
 
 function makeListing(doc) {
-  console.log(doc.id);
-  
+  // console.log(doc.id);
+
   let p = document.createElement("p");
-  
+
   let editBtn = document.createElement("button");
   let deleteBtn = document.createElement("button");
 
@@ -119,14 +119,31 @@ function makeListing(doc) {
   let deleteTextNode = document.createTextNode("Delete");
   let editTextNode = document.createTextNode("Edit");
 
-  p.setAttribute("id" , doc.id);
+  p.setAttribute("id", doc.id);
   p.appendChild(pTextNode);
 
   deleteBtn.appendChild(deleteTextNode);
   editBtn.appendChild(editTextNode);
+
+  editBtn.setAttribute("onClick", "edit(this)");
 
   p.appendChild(deleteBtn);
   p.appendChild(editBtn);
 
   divListing.appendChild(p);
 }
+
+function edit(editEl) {
+  console.log(editEl.parentNode);
+}
+// db.collection("todos")
+//   .doc("DC")
+//   .update({
+//     todo : todosEl.value
+//   })
+//   .then(() => {
+//     console.log("Document successfully updated!");
+//   })
+//   .catch((error) => {
+//     console.error("Error updating document: ", error);
+//   });
