@@ -20,7 +20,6 @@ let editValue;
 function signUp() {
   fb.createUserWithEmailAndPassword(emailEl.value, passwordEl.value)
     .then((userCredential) => {
-      // Signed in
       var user = userCredential.user;
       message.innerHTML = "Sign up Successful";
       message.style.color = "green";
@@ -30,7 +29,6 @@ function signUp() {
     .catch((error) => {
       var errorCode = error.code;
       var errorMessage = error.message;
-      // ..
       message.innerHTML = errorCode + " " + errorMessage;
       message.style.color = "red";
     });
@@ -39,7 +37,6 @@ function signUp() {
 function signIn() {
   fb.signInWithEmailAndPassword(emailEl.value, passwordEl.value)
     .then((userCredential) => {
-      // Signed in
       let user = userCredential.user;
       message.innerHTML = "Sign up Successful";
       message.style.color = "green";
@@ -62,7 +59,6 @@ function signOut() {
       window.location.href = "./index.html";
     })
     .catch((error) => {
-      // An error happened.
       console.log(error);
     });
 }
