@@ -92,7 +92,7 @@ function getTodos() {
           let docData = change.doc.data();
           docData.id = change.doc.id;
           // console.log("New city: ", docData);
-          makeListing(change.doc.data());
+          makeListing(docData);
         }
         // if (change.type === "modified") {
         //     console.log("Modified city: ", change.doc.data());
@@ -107,10 +107,13 @@ function getTodos() {
 let divListing = document.getElementById("listing");
 
 function makeListing(doc) {
+  console.log(doc.id);
+  
   let p = document.createElement("p");
   let pTextNode = document.createTextNode(doc.todo);
+  p.setAttribute("id" , doc.id);
   p.appendChild(pTextNode);
   divListing.appendChild(p);
 
-  console.log(doc.todo);
+  // console.log(doc.todo);
 }
