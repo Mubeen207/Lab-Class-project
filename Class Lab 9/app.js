@@ -51,10 +51,10 @@ function signIn() {
 }
 
 function signOut() {
+  localStorage.clear();
   fb.signOut()
     .then(() => {
       console.log("Sign Out");
-      localStorage.removeItem("uid");
       window.location.href = "./index.html";
     })
     .catch((error) => {
