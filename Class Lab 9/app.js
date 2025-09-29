@@ -80,34 +80,28 @@ function addTodo() {
     .catch((error) => {
       console.error("Error adding document: ", error);
     });
-    // console.log(fb.currentUser.uid);
-    
-  }
-  
-  function getTodos() {
-    let uidData = JSON.parse(localStorage.getItem("uid"));
-    db.collection("todos").where("uid", "==", uidData.uid)
+}
+
+function getTodos() {
+  let uidData = JSON.parse(localStorage.getItem("uid"));
+  db.collection("todos")
+    .where("uid", "==", uidData.uid)
     .onSnapshot((snapshot) => {
-        snapshot.docChanges().forEach((change) => {
-            if (change.type === "added") {
-                console.log("New city: ", change.doc.data());
-                      makeListing(change.doc.data());
-            }
-            // if (change.type === "modified") {
-            //     console.log("Modified city: ", change.doc.data());
-            // }
-            // if (change.type === "removed") {
-            //     console.log("Removed city: ", change.doc.data());
-            // }
-        });
+      snapshot.docChanges().forEach((change) => {
+        if (change.type === "added") {
+          let docData = change.doc.data();
+          docData.id = change.doc.id;
+          // console.log("New city: ", docData);
+          makeListing(change.doc.data());
+        }
+        // if (change.type === "modified") {
+        //     console.log("Modified city: ", change.doc.data());
+        // }
+        // if (change.type === "removed") {
+        //     console.log("Removed city: ", change.doc.data());
+        // }
+      });
     });
-  // db.collection("todos")
-  //   .where("uid", "==", uidData.uid)
-  //   .onSnapshot((querySnapshot) => {
-  //     querySnapshot.forEach((doc) => {
-  //       // console.log(doc.data());
-  //     });
-  //   });
 }
 
 let divListing = document.getElementById("listing");
