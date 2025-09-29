@@ -13,6 +13,8 @@ const db = firebase.firestore();
 let emailEl = document.getElementById("email");
 let passwordEl = document.getElementById("password");
 let message = document.getElementById("message");
+let addBtn = document.getElementById("addBtn");
+let editValue;
 
 // Authentication
 function signUp() {
@@ -80,6 +82,7 @@ function addTodo() {
     .catch((error) => {
       console.error("Error adding document: ", error);
     });
+  todosEl.value = "";
 }
 
 function getTodos() {
@@ -91,15 +94,15 @@ function getTodos() {
         if (change.type === "added") {
           let docData = change.doc.data();
           docData.id = change.doc.id;
-          // console.log("New city: ", docData);
+          console.log("New city: ", docData);
           makeListing(docData);
         }
-        // if (change.type === "modified") {
-        //     console.log("Modified city: ", change.doc.data());
-        // }
-        // if (change.type === "removed") {
-        //     console.log("Removed city: ", change.doc.data());
-        // }
+        if (change.type === "modified") {
+          console.log("Modified city: ", change.doc.data());
+        }
+        if (change.type === "removed") {
+          console.log("Removed city: ", change.doc.data());
+        }
       });
     });
 }
@@ -126,6 +129,7 @@ function makeListing(doc) {
   editBtn.appendChild(editTextNode);
 
   editBtn.setAttribute("onClick", "edit(this)");
+  deleteBtn.setAttribute("onClick", "deleteItem(this)");
 
   p.appendChild(deleteBtn);
   p.appendChild(editBtn);
@@ -134,16 +138,41 @@ function makeListing(doc) {
 }
 
 function edit(editEl) {
-  console.log(editEl.parentNode);
+  addBtn.innerHTML = "Save Todo";
+  addBtn.setAttribute("onClick", "editFirebase()");
+
+  editValue = editEl.parentNode;
+  todosEl.value = editValue.firstChild.nodeValue;
 }
-// db.collection("todos")
-//   .doc("DC")
-//   .update({
-//     todo : todosEl.value
-//   })
-//   .then(() => {
-//     console.log("Document successfully updated!");
-//   })
-//   .catch((error) => {
-//     console.error("Error updating document: ", error);
-//   });
+function editFirebase() {
+  db.collection("todos")
+    .doc(editValue.id)
+    .update({
+      todo: todosEl.value,
+    })
+    .then(() => {
+      console.log("Document successfully updated!");
+      addBtn.innerHTML = "Add Todo";
+      addBtn.onclick = "addBtn()";
+    })
+    .catch((error) => {
+      console.error("Error updating document: ", error);
+    });
+  editValue.firstChild.nodeValue = todosEl.value;
+  todosEl.value = "";
+}
+
+function deleteItem(deleteEl) {
+  let deleteId = deleteEl.parentNode.id;
+  console.log(deleteId);
+  divListing.removeChild(deleteEl.parentNode);
+  db.collection("todos")
+    .doc(deleteId)
+    .delete()
+    .then(() => {
+      console.log("Document successfully deleted!");
+    })
+    .catch((error) => {
+      console.error("Error removing document: ", error);
+    });
+}
