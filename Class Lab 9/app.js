@@ -20,6 +20,7 @@ let editValue;
 function signUp() {
   fb.createUserWithEmailAndPassword(emailEl.value, passwordEl.value)
     .then((userCredential) => {
+
       var user = userCredential.user;
       message.innerHTML = "Sign up Successful";
       message.style.color = "green";
