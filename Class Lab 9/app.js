@@ -22,7 +22,8 @@ function signUp() {
       var user = userCredential.user;
       message.innerHTML = "Sign up Successful";
       message.style.color = "green";
-      redirectToHome();
+      location.href = "./home.html";
+      localStorage.setItem("uid", JSON.stringify(fb.currentUser));
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -37,10 +38,11 @@ function signIn() {
   fb.signInWithEmailAndPassword(emailEl.value, passwordEl.value)
     .then((userCredential) => {
       // Signed in
-      var user = userCredential.user;
+      let user = userCredential.user;
       message.innerHTML = "Sign up Successful";
       message.style.color = "green";
-      redirectToHome();
+      location.href = "./home.html";
+      localStorage.setItem("uid", JSON.stringify(fb.currentUser));
     })
     .catch((error) => {
       var errorCode = error.code;
@@ -63,11 +65,6 @@ function signOut() {
     });
 }
 
-function redirectToHome() {
-  location.href = "./home.html";
-  localStorage.setItem("uid", JSON.stringify(fb.currentUser));
-}
-
 // Firestore
 let todosEl = document.getElementById("todos");
 
@@ -83,18 +80,34 @@ function addTodo() {
     .catch((error) => {
       console.error("Error adding document: ", error);
     });
-}
-
-function getTodos() {
-  let uidData = JSON.parse(localStorage.getItem("uid"));
-  db.collection("todos")
-    .where("uid", "==", uidData.uid)
-    .onSnapshot((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        // console.log(doc.data());
-        makeListing(doc.data());
-      });
+    // console.log(fb.currentUser.uid);
+    
+  }
+  
+  function getTodos() {
+    let uidData = JSON.parse(localStorage.getItem("uid"));
+    db.collection("todos").where("uid", "==", uidData.uid)
+    .onSnapshot((snapshot) => {
+        snapshot.docChanges().forEach((change) => {
+            if (change.type === "added") {
+                console.log("New city: ", change.doc.data());
+                      makeListing(change.doc.data());
+            }
+            // if (change.type === "modified") {
+            //     console.log("Modified city: ", change.doc.data());
+            // }
+            // if (change.type === "removed") {
+            //     console.log("Removed city: ", change.doc.data());
+            // }
+        });
     });
+  // db.collection("todos")
+  //   .where("uid", "==", uidData.uid)
+  //   .onSnapshot((querySnapshot) => {
+  //     querySnapshot.forEach((doc) => {
+  //       // console.log(doc.data());
+  //     });
+  //   });
 }
 
 let divListing = document.getElementById("listing");
@@ -104,6 +117,6 @@ function makeListing(doc) {
   let pTextNode = document.createTextNode(doc.todo);
   p.appendChild(pTextNode);
   divListing.appendChild(p);
-  
+
   console.log(doc.todo);
 }
