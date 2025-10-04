@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body onload="getDeals()">
+    <button onclick="signOut()">SignOut</button>
+    <input type="text" placeholder="Restorent Name" id="restorent">
+    <input type="text" placeholder="Dish Name" id="dishName">
+    <input type="text" placeholder="price" id="price">
+    <input type="text" placeholder="Quantity" id="quantity">
+    <input type="text" placeholder="Location" id="location">
+    <input type="text" placeholder="Delivery Time" id="deliveryTime">
+    <button onclick="addDish()">Submit</button>
+    <p id="message"></p>
+    <div id="productListing"></div>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.3.0/firebase-auth-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
