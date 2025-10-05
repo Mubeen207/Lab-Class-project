@@ -7,7 +7,7 @@
 // persons = parseInt(persons);
 
 // console.log(parseFloat(bill / persons).toFixed(2));
-
+// All function is spreated
 //-----------------------------------------------------------------
 // function tax() {
 //   let salary = prompt("Enter your  number");
