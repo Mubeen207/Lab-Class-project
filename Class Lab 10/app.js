@@ -1,6 +1,6 @@
 const firebaseConfig = {
     apiKey: //enter your api key
-    authDomain: "cd-first-project-15d4e.firebaseapp.com",
+    authDomain: // auth domanin enter
     projectId: "cd-first-project-15d4e",
     storageBucket: "cd-first-project-15d4e.firebasestorage.app",
     messagingSenderId: "221789667167",
