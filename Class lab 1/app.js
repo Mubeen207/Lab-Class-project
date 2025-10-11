@@ -22,7 +22,7 @@
 // }
 // tax();
 //--------------------------------------------------------------------------
-
+// This is a Admin Prosecc
 // let initAmountEl = document.getElementById("init-amount");
 // let bidMessageEl = document.getElementById("show-message");
 // initAmountEl.innerHTML = 1000;
