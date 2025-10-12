@@ -9,6 +9,7 @@
 // console.log(parseFloat(bill / persons).toFixed(2));
 // All function is spreated
 //-----------------------------------------------------------------
+// This is A teaxt Ceaking Function
 // function tax() {
 //   let salary = prompt("Enter your  number");
 //   salary = parseInt(salary);
