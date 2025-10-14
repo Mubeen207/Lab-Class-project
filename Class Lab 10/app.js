@@ -3,7 +3,7 @@ const firebaseConfig = {
     authDomain: // auth domanin enter
     projectId: // projectID
     storageBucket: // storageBuket Add
-    messagingSenderId: "221789667167",
+    messagingSenderId: // messaging Sender Id
     appId: "1:221789667167:web:e354f7017366b11ddd80ea",
     measurementId: "G-H37P36CTFD",
 };
