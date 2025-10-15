@@ -49,7 +49,7 @@
 //   }
 //   return matched;
 // }
-
+// This is a Show Bid Message Function
 // function showBidMeesage(userBidAmount, matchedBid) {
 //   if (matchedBid) {
 //     initAmountEl.innerHTML = Number(initAmountEl.innerHTML) + userBidAmount;
