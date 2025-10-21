@@ -1,5 +1,5 @@
 //-----------------------------------------------------------------------------------------
-// let rightnow = new Date(); // Today Date
+// let rightnow = new Date(); // Today Date Show
 // let doomsDay = new Date("20 july, 2035"); // doomsday date
 
 // let doomsDayTime = doomsDay.getTime();
