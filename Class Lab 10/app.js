@@ -5,7 +5,7 @@ const firebaseConfig = {
     storageBucket: // storageBuket Add
     messagingSenderId: // messaging Sender Id
     appId: // appID
-    measurementId: "G-H37P36CTFD",
+    measurementId: // measuremane ID
 };
 firebase.initializeApp(firebaseConfig);
 let fb = firebase.auth();
