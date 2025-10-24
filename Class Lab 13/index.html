@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Expanse</title>
-</head>
-<body>
+  </head>
+  <body>
+    <h1>Expanse Tracker</h1>
+    <h2>Budget</h2>
+    <input type="number" id="budget" placeholder="Enter Your Budget Amoubt?" />
+
+    <button onclick="addBudget()">Add Budget</button>
+    <h2>Expanse</h2>
+    <input type="text" id="expanse-name" placeholder="Enter the Expanse Name" />
+    <input
+      type="number"
+      id="expanse-amount"
+      placeholder="Enter the Expanse Amount"
+    />
+
+    <button onclick="addExpance()">Add Expanse</button>
+    <h3>Your Budget is:<span id="budget-amount"></span></h3>
+    <div id="expanxce-list">
+     
+    </div>
     <script src="app.js"></script>
-</body>
+  </body>
 </html>
