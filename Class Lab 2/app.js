@@ -13,6 +13,7 @@
 
 // console.log(result, " Days");
 //-----------------------------------------------------------------------------------------
+// this is show the current day
 // let rightNow = new Date();
 // let today = rightNow.getDay();
 // let days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
