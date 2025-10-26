@@ -21,7 +21,7 @@
 // console.log(todayStr);
 //-----------------------------------------------------------------------------------------
 // let rightNow = new Date();
-
+// This This show to You a Current Month
 // let month = rightNow.getMonth(); // 0 - 11
 // let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 // let monthStr = months[month];
