@@ -28,7 +28,7 @@
 // console.log(monthStr);
 //-----------------------------------------------------------------------------------------
 // let rightNow = new Date();
-// This is Show YOu The All types Days
+// This is Show The All Types of dats And Times
 // let todayDate = rightNow.getDate();
 // let thisYear = rightNow.getFullYear();// 2025
 // let todayHours = rightNow.getHours();
