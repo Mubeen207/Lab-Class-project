@@ -38,6 +38,7 @@
 // let todayTimeZone = rightNow.getTimezoneOffset();
 // console.log(todayTimeZone);
 //-----------------------------------------------------------------------------------------
+// This is Show To You A hours details
 // let time = document.getElementById("time");
 // let rightNow = new Date();
 // let todayHours = rightNow.getHours();
