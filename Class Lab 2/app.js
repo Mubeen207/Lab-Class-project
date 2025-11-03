@@ -60,6 +60,7 @@
 // setInterval(function () {
 // }, 1000);
 //-----------------------------------------------------------------------------------------
+// This is Time Seconde Counter
 // let time = document.getElementById("time");
 // let count = 0;
 // let sixty = 60;
