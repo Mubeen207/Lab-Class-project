@@ -80,7 +80,7 @@
 // }
 // call();
 //-----------------------------------------------------------------------------------------
-
+// This function is print string after 5 seconds
 // let time = document.getElementById("time");
 // time.innerHTML = "Hello";
 // setTimeout(function () {
