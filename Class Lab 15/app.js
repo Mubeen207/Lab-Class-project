@@ -83,13 +83,24 @@
 
 //------------------------------------------------------------------------------------
 
-let total = 0;
-let marks = {
-    Math: 115,
-    English: 245,
-    Physics: 100
+// let total = 0;
+// let marks = {
+//     Math: 115,
+//     English: 245,
+//     Physics: 100
+// }
+// for (let subject in marks) {
+//     total += marks[subject];
+// }
+// console.log(total);
+
+//-----------------------------------------------------------------------------------
+
+let inventory = {
+    apples: 8,
+    banana: 10,
+    kiwi: 15
 }
-for (let subject in marks) {
-    total += marks[subject];
+for (let items in inventory) {
+    console.log(`There are ${inventory[items]} ${items} Left`);
 }
-console.log(total);
