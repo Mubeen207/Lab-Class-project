@@ -85,9 +85,9 @@
 
 let total = 0;
 let marks = {
-    math: 115,
-    english: 245,
-    physics: 100
+    Math: 115,
+    English: 245,
+    Physics: 100
 }
 for (let subject in marks) {
     total += marks[subject];
