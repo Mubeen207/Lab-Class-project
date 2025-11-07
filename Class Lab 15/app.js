@@ -61,24 +61,35 @@
 // console.log(letter);
 //-------------------------------------------------------------------------
 
-let myObj = {
-    fullName: "Mubeen",
-    rollNum: 123456
-}
-for (let items in myObj) {
-    console.log(`${items}: ${myObj[items]}`);
-}
+// let myObj = {
+//     fullName: "Mubeen",
+//     rollNum: 123456
+// }
+// for (let items in myObj) {
+//     console.log(`${items}: ${myObj[items]}`);
+// }
 
-for (let items of Object.keys(myObj)) {
-    console.log(`${items}: ${myObj[items]}`);
-}
+// for (let items of Object.keys(myObj)) {
+//     console.log(`${items}: ${myObj[items]}`);
+// }
 
-for (let items of Object.values(myObj)) {
-    console.log(`${items}`);
-}
+// for (let items of Object.values(myObj)) {
+//     console.log(`${items}`);
+// }
 
-for (let [keys , values] of Object.entries(myObj)) {
-    console.log(`${keys}: ${values}`);
-}
+// for (let [keys , values] of Object.entries(myObj)) {
+//     console.log(`${keys}: ${values}`);
+// }
 
 //------------------------------------------------------------------------------------
+
+let total = 0;
+let marks = {
+    math: 115,
+    english: 245,
+    physics: 100
+}
+for (let subject in marks) {
+    total += marks[subject];
+}
+console.log(total);
