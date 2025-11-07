@@ -96,11 +96,22 @@
 
 //-----------------------------------------------------------------------------------
 
-let inventory = {
-    apples: 8,
-    banana: 10,
-    kiwi: 15
+// let inventory = {
+//     apples: 8,
+//     banana: 10,
+//     kiwi: 15
+// }
+// for (let items in inventory) {
+//     console.log(`There are ${inventory[items]} ${items} Left`);
+// }
+//-----------------------------------------------------------------------------------
+let arr = [];
+let human = {
+    fullName: "Mubeen Ul Islam",
+    rollNum: 123456,
+    isDisabled: true
 }
-for (let items in inventory) {
-    console.log(`There are ${inventory[items]} ${items} Left`);
+for (let items in human) {
+   arr.push(human[items])
 }
+console.log(arr);
