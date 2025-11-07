@@ -105,13 +105,21 @@
 //     console.log(`There are ${inventory[items]} ${items} Left`);
 // }
 //-----------------------------------------------------------------------------------
-let arr = [];
-let human = {
-    fullName: "Mubeen Ul Islam",
-    rollNum: 123456,
-    isDisabled: true
-}
-for (let items in human) {
-   arr.push(human[items])
-}
-console.log(arr);
+// let arr = [];
+// let human = {
+//     fullName: "Mubeen Ul Islam",
+//     rollNum: 123456,
+//     isDisabled: true
+// }
+// for (let items in human) {
+//    arr.push(human[items])
+// }
+// console.log(arr);
+//-------------------------------------------------------------------------
+
+// let human = new Map([
+//     ["fullName" , "Talal Ahmed"],
+//     ["rollNo" , 123456],
+//     ["isDisables" , false]
+// ]);
+// console.log(human);
