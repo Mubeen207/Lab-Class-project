@@ -6,7 +6,7 @@
 // }
 //-----------------------------------------------------------
 
-const { use } = require("react");
+// const { use } = require("react");
 
 let divel = document.getElementsByTagName("div");
 let UserInput;
