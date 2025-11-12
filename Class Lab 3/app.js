@@ -8,7 +8,7 @@
 
 // const { use } = require("react");
 
-let divel = document.getElementsByTagName("div");
+// let divel = document.getElementsByTagName("div");
 let UserInput;
 let para = divel.getElementsByTagName("p");
 
