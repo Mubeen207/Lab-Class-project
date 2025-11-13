@@ -10,7 +10,7 @@
 
 // let divel = document.getElementsByTagName("div");
 // let UserInput;
-let para = divel.getElementsByTagName("p");
+// let para = divel.getElementsByTagName("p");
 
 for (let i = 0; i < para.length; i++) {
 UserInput = prompt("Enter Your Prompt");
