@@ -19,7 +19,9 @@
 //--------------------------------------------------------
 
 // let numbers = [23, 45, 22, 66, 98, 24];
-// let even = numbers.filter(num => num % 2 === 0);
+// let even = numbers.filter(function (num) {
+//     return num % 2 === 0;
+// });
 // for (let one of even) {
 //     console.log(one);
 // }
