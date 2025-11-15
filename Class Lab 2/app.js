@@ -88,7 +88,7 @@
 // }, 5000);
 
 //-----------------------------------------------------------------------------------------
-// This is A local Storage
+// This is A local Storage Now Using
 // localStorage.setItem();
 // localStorage.getItem();
 // let time = document.getElementById("time");
