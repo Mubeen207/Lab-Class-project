@@ -60,30 +60,47 @@ function bank() {
 }
 // bank();
 //-----------------------------------------------------------------------------------------
-function task3 (){
-    function random (){
-      return Math.ceil(Math.random() * 6);
-    }
-    function rollDice (userNum = random()){
-      console.log(userNum);
-      
-    }
-    rollDice();
+function task3() {
+  function random() {
+    return Math.ceil(Math.random() * 6);
+  }
+  function rollDice(userNum = random()) {
+    console.log(userNum);
+  }
+  rollDice();
 }
 // task3();
 //-----------------------------------------------------------------
-function tryCatch (){
-
+function tryCatch() {
   console.log("1");
   try {
     undefinedFunction();
-  }
-  catch (e){
+  } catch (e) {
     console.error(e);
-    
+  } finally {
+    console.log("2");
   }
-  console.log("2");
-  
 }
-tryCatch();
+// tryCatch();
 //-------------------------------------------------------------
+
+function switchCase () {
+let days = +prompt("Enter Numbeer");
+switch(days){
+  case 1: 
+  console.log("Monday");
+  break;
+  case 2: 
+  console.log("Tuesday");
+  break;
+  case 3: 
+  console.log("Wednesday");
+  break;
+  case 4: 
+  console.log("Thursday");
+  break;
+  default:
+    console.log("Get Out");
+}
+}
+switchCase();
