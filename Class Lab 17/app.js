@@ -72,4 +72,18 @@ function task3 (){
 }
 // task3();
 //-----------------------------------------------------------------
+function tryCatch (){
 
+  console.log("1");
+  try {
+    undefinedFunction();
+  }
+  catch (e){
+    console.error(e);
+    
+  }
+  console.log("2");
+  
+}
+tryCatch();
+//-------------------------------------------------------------
