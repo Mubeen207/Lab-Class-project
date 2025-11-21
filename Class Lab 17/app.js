@@ -19,10 +19,10 @@ class User {
 // }
 
 class Admin extends User {
-  super(userName, password, email) {
-    userName,
-    email,
-    password
+  constructor (userName, password, email , adminPrivilage) {
+
+    super(userName, password, email) 
+      this.adminPrivilage = adminPrivilage;
   }
   adminDashboard= true;
 }
@@ -30,7 +30,7 @@ class Admin extends User {
 // let obj1 = new User("mubeen207", 123456, "mubeen@gmail.com");
 // let childNo1 = new employee("mubeen207", 123456, "mubeen@gmail.com");
 // let childNo2 = new manager("mubeen207", 123456, "mubeen@gmail.com");
-let isAdmin = new Admin("mubeen207", 123456, "mubeen@gmail.com");
+let isAdmin = new Admin("mubeen207", 123456, "mubeen@gmail.com" , true);
 
 // console.log(obj1);
 // childNo1.print();
