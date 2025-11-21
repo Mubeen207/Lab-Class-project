@@ -58,4 +58,18 @@ function bank() {
   bank.deposit();
   bank.withdraw();
 }
-bank();
+// bank();
+//-----------------------------------------------------------------------------------------
+function task3 (){
+    function random (){
+      return Math.ceil(Math.random() * 6);
+    }
+    function rollDice (userNum = random()){
+      console.log(userNum);
+      
+    }
+    rollDice();
+}
+// task3();
+//-----------------------------------------------------------------
+
