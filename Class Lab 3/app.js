@@ -15,7 +15,7 @@
 // for (let i = 0; i < para.length; i++) {
 // UserInput = prompt("Enter Your Prompt");
 // para[i].style.backgroundColor = "black"
-para[i].style.color = "white"
+// para[i].style.color = "white"
 para[i].innerHTML = UserInput;
 }
 
