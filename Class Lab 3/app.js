@@ -16,8 +16,8 @@
 // UserInput = prompt("Enter Your Prompt");
 // para[i].style.backgroundColor = "black"
 // para[i].style.color = "white"
-para[i].innerHTML = UserInput;
-}
+// para[i].innerHTML = UserInput;
+// }
 
 //-----------------------------------------------------------
 const { use } = require("react");
