@@ -96,7 +96,7 @@
 // function submit() {
 //   localStorage.setItem("Student Name", StudentName.value);
 //   let setname = localStorage.getItem("Student Name");
-
+// This is User Name Sates
 //   time.innerHTML = setname;
 // }
 // let setname = localStorage.getItem("Student Name");
