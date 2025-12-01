@@ -1,9 +1,18 @@
 import './App.css'
 import Greeting from './components/Greeting'
 function App() {
+   prompt();
+    function prompt() {
+      let name = prompt = "Enter Your Name";
+        return name;
+    }
+    if (prompt() === "") {
+        prompt();
+    }
   return (
     <>
-      <Greeting name="Mubeen" />
+    <input type="text" />
+      <Greeting name = {prompt()} />
     </>
   )
 }
