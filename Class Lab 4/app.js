@@ -12,6 +12,7 @@
 //     }
 
 // }
+// using image one
 let img1 = document.getElementById("img-1");
 let img2 = document.getElementById("img-2");
 let img3 = document.getElementById("img-3");
