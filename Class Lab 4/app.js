@@ -8,7 +8,7 @@
 //     }
 //     else {
 //         king.innerHTML = "You Lost";
-
+//
 //     }
 
 // }
