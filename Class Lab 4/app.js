@@ -51,3 +51,4 @@ function resetCard() {
   img3.src = "./Images/card-back.png";
   isFlipped = false;
 }
+// Completed
