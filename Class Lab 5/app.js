@@ -1,3 +1,4 @@
+// Noew Code is Wirrten Down
 // let h1 = document.createElement("h1");
 // let message = document.createTextNode("This is a heading from javascript");
 // let bodyEl = document.childNodes[1].childNodes[2];
