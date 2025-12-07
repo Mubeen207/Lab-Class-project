@@ -7,7 +7,7 @@
 // bodyEl.appendChild(h1);
 // console.log(h1);
 
-
+// This is Practice 2
 // let h1 = document.getElementById("heading");
 // console.log(h1.hasAttribute("class"));
 // console.log(h1.getAttribute("title"));
