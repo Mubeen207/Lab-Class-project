@@ -31,7 +31,7 @@ function signUp() {
             message.style.color = "red";
         });
 }
-
+// This is a SignIn Function
 function signIn() {
     fb.signInWithEmailAndPassword(emailEl.value, passwordEl.value)
         .then((userCredential) => {
