@@ -65,7 +65,7 @@ function EditItem(el){
 // let div1 = document.getElementById("div-1");
 // let special = document.getElementById("special");
 // let div2 = div1.childNodes[1];
-
+// Create h1 Hrom GEting H1 From HTml
 // let h1 = document.createElement("h1");
 // let text = document.createTextNode("Hello Dom");
 
