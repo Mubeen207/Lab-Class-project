@@ -61,6 +61,7 @@ function EditItem(el){
     input.value = el.parentNode.value;
 
 }
+// This is Element Creating Practice on Lab Class
 // There is an Error Facing
 // let div1 = document.getElementById("div-1");
 // let special = document.getElementById("special");
