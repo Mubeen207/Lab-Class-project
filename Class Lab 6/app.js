@@ -7,7 +7,7 @@
 //     console.log("Started...");
 //   },
 // };
-
+// Now Deleting A Models And VAlues
 // delete cars.color;
 // delete cars.price;
 
