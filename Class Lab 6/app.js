@@ -9,6 +9,7 @@
 // };
 // Now Deleting A Models And VAlues
 // delete cars.color;
+// Cars.color === black is delted
 // delete cars.price;
 
 // if ("price" in cars) {
