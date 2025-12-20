@@ -11,7 +11,7 @@
 // delete cars.color;
 // Cars.color === black is delted
 // delete cars.price;
-
+// Cars.proce === 8500000 Is Dleted From Aryy
 // if ("price" in cars) {
 //   console.log(cars.model + " is Availablr For Sale");
 // } else {
