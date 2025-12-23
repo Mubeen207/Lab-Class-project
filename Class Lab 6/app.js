@@ -17,6 +17,7 @@
 // Cars.proce === 8500000 Is Dleted From Aryy
 // Now Condition Cheaking Cars Price
 // if ("price" in cars) {
+// Ager price car me hoga to car ka modle show hoga
 //   console.log(cars.model + " is Availablr For Sale");
 // } else {
 //   console.log(cars.model + " is Not Available for sale");
