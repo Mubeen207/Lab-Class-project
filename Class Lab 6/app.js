@@ -20,6 +20,7 @@
 // Ager price car me hoga to car ka modle show hoga
 //   console.log(cars.model + " is Availablr For Sale");
 // } else {
+// Ager price car me hoga to car ka modle show nahi hoga
 //   console.log(cars.model + " is Not Available for sale");
 // }
 
