@@ -23,7 +23,7 @@
 // Ager price car me hoga to car ka modle show nahi hoga
 //   console.log(cars.model + " is Not Available for sale");
 // }
-
+// now Consoling a arry
 // console.log(cars);
 
 // for (let props in cars) {
