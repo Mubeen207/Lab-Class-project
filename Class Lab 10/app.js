@@ -47,6 +47,7 @@ function signIn() {
             message.style.color = "red";
         });
 }
+// This is a SignOuit Function
 function signOut() {
     localStorage.clear();
     fb.signOut()
