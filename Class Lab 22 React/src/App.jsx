@@ -1,3 +1,4 @@
+import Counter from "./components/Counter";
 import StudentCard from "./components/StudentCard";
 
 let data = [
@@ -39,6 +40,8 @@ function App() {
       {data.map((s, i) => (
         <StudentCard key={i} {...s} />
       ))}
+
+      <Counter />
     </>
   );
 }
