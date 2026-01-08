@@ -25,19 +25,30 @@ function Counter() {
   }
   return (
     <>
-      <h3 className="p-5 mx-2">😀 {count}</h3>
-      <button
-        className="border p-5 mx-2 rounded-2xl hover:bg-black hover:text-white transition-all "
-        onClick={() => change("-")}
-      >
-        Count-
-      </button>
-      <button
-        className="border p-5 mx-2 mb-2 rounded-2xl hover:bg-black hover:text-white transition-all "
-        onClick={() => change("+")}
-      >
-        Count+
-      </button>
+      <div className="inline-flex items-center gap-4 rounded-full bg-white p-2 shadow-xl border border-gray-100">
+        <button
+          className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-red-500 bg-white text-xl font-bold text-red-500 transition-all hover:bg-red-500 hover:text-white active:scale-90"
+          onClick={() => change("-")}
+        >
+         −
+        </button>
+
+        <div className="flex min-w-20 flex-col items-center">
+          <span className="text-xs font-bold uppercase tracking-widest text-gray-400">
+            Value
+          </span>
+          <h3 className="text-2xl font-black text-gray-800 tabular-nums">
+            😀{count}
+          </h3>
+        </div>
+
+        <button
+          className="flex h-12 w-12 items-center justify-center rounded-full border-2 border-emerald-500 bg-white text-xl font-bold text-emerald-500 transition-all hover:bg-emerald-500 hover:text-white active:scale-90"
+          onClick={() => change("+")}
+        >
+          +
+        </button>
+      </div>
     </>
   );
 }

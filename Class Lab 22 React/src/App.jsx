@@ -1,4 +1,5 @@
 import Counter from "./components/Counter";
+import SignupForm from "./components/SignupForm";
 import StudentCard from "./components/StudentCard";
 
 let data = [
@@ -37,6 +38,7 @@ let data = [
 function App() {
   return (
     <>
+        <SignupForm />
       {data.map((s, i) => (
         <StudentCard key={i} {...s} />
       ))}
