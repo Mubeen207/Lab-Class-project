@@ -21,7 +21,7 @@
 //   }
 // }
 // tax();
-//------------------------------------------------------------------
+//--------------------------------------------------------------------------
 
 // let initAmountEl = document.getElementById("init-amount");
 // let bidMessageEl = document.getElementById("show-message");
