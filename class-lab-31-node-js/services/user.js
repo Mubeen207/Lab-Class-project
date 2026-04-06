@@ -19,10 +19,10 @@ export function saveUser(name, email, password) {
   }
 
   users.push({
-    id: Date.now.toString(36),
+    id: Date.now().toString(36),
     email,
     password,
     name,
   });
-  fs.writeFileSync(filePath, JSON.stringify(users));
+  fs.writeFileSync(filePath, JSON.stringify(users, null, 2));
 }

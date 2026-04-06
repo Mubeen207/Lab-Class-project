@@ -1,9 +1,10 @@
 import express from "express";
-import { getUsers, saveUser } from "./services/user";
+import { getUsers, saveUser } from "./services/user.js";
 import { userSchema } from "./schema";
 const app = express();
 
 app.use(express.json());
+
 
 app.use("/", (res, req) => {
   console.log("Deshboard");
