@@ -1,6 +1,6 @@
 import express from "express";
-import { getUsers } from "./services/user";
-import 
+import { getUsers, saveUser } from "./services/user";
+import { userSchema } from "./schema";
 const app = express();
 
 app.use(express.json());
@@ -12,9 +12,10 @@ app.use("/users", (res, req) => {
   const users = getUsers();
   res.json(users);
 });
-app.use("/signup", (res, req) => {
-  const user = req.body;
-
+app.use("/signup", async (res, req) => {
+  const user = await userSchema.validateAsync(req.body);
+  saveUser(user.name, user.email, user.password);
+  res.json({ message: "user Added" });
 });
 
 app.listen(3000, () => {
